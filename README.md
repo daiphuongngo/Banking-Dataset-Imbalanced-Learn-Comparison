@@ -33,7 +33,7 @@ Single Decision Tree
 Mini-batch resampling for Keras and Tensorflow (Deep Neural Network - MLP) [6]
 
 
-**Table of Contents:
+**Table of Contents:**
 
 Comparison of ensembling classifiers internally using sampling
 
@@ -73,13 +73,23 @@ H.3 Result
 
 References:
 [1] https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.EasyEnsembleClassifier.html
+
 [2] https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.BalancedRandomForestClassifier.html
+
 [3] https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.BalancedBaggingClassifier.html
+
 [4] https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.EasyEnsembleClassifier.html
+
 [5] https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.RUSBoostClassifier.html
+
 [6] https://imbalanced-learn.readthedocs.io/en/stable/auto_examples/applications/porto_seguro_keras_under_sampling.html?highlight=mini%20batch
+
 [7] https://www.reddit.com/r/MachineLearning/comments/ihwbsn/d_why_onehot_encoding_is_a_poor_fit_for_random/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+
 [8] Comparison of ensembling classifiers internally using sampling. https://imbalanced-learn.readthedocs.io/en/stable/auto_examples/ensemble/plot_comparison_ensemble_classifier.html#sphx-glr-auto-examples-ensemble-plot-comparison-ensemble-classifier-py
+
 [9] https://machinelearningmastery.com/xgboost-for-imbalanced-classification/
+
 [10] https://www.kaggle.com/tilii7/hyperparameter-grid-search-with-xgboost
+
 [11] https://www.kaggle.com/saxinou/imbalanced-data-xgboost-tunning
