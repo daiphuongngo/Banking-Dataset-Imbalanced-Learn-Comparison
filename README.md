@@ -22,11 +22,11 @@ Find the most important features of this dataset which can be used in policies t
 
 Imbalanced dataset could cause overfitting. We can not rely on Accuracy as a metric for imbalanced dataset (will be usually high and misleading) so we would use confusion matrix, balanced accuracy, geometric mean, F1 score instead. 
 
-**Target statement: **
+**Target statement:**
 
 Selecting the best classification method which also can avoid overfitting.
 
-**Target achievement: **
+**Target achievement:**
 
 RUS Boost has the highest Balanced Accuracy, Geometric Mean, F1 score and the best Confusion Matrix among all classification methods.
 
