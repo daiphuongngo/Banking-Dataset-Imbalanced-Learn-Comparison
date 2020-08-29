@@ -1,6 +1,5 @@
 # banking-dataset-imbalanced-learn-comparison
 
-imbalanced-learn
 imbalanced-learn offers a number of re-sampling techniques commonly used in strong between-class imbalanced datasets . 
 This Python package is also compatible with scikit-learn.
 
