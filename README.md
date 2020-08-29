@@ -39,7 +39,9 @@ Here are Classification methods which I would create and evaluate in my file:
 
 - Easy Ensemble classifier [1]
 
-- Balanced Random Forest [2]
+- Random Forest (This model has 27MB so I will not upload it here.)
+
+- Balanced Random Forest [2] (This model has 32MB so I will not upload it here.)
 
 - Bagging (Classifier)
 
