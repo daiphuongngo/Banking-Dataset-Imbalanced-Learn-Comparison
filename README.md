@@ -1,35 +1,54 @@
 # banking-dataset-imbalanced-learn-comparison
 
-imbalanced-learn offers a number of re-sampling techniques commonly used in strong between-class imbalanced datasets . 
-This Python package is also compatible with scikit-learn.
+imbalanced-learn offers a number of re-sampling techniques commonly used in strong between-class imbalanced datasets. This Python package is also compatible with scikit-learn.
 
 In my case, I got the same error "dot: graph is too large for cairo-renderer bitmaps. scaling by 0.0347552 to fit" all of the time when running the Balanced Random Forest on old version of Colab Notebooks. Here are dependencies of imbalanced-learn:
+
 Python 3.6+
+
 scipy(>=0.19.1)
+
 numpy(>=1.13.3)
+
 scikit-learn(>=0.23)
+
 joblib(>=0.11)
+
 keras 2 (optional)
+
 tensorflow (optional)
+
 matplotlib(>=2.0.0)
+
 pandas(>=0.22)
 
 **Installation:** 
+
 You should install imbalanced-learn on the PyPi's repository via pip from the begging and restart the runtime, then start your work:
-pip install -U imbalanced-learn
+```pip install -U imbalanced-learn```
 
 Anaconda Cloud platform: 
-conda install -c conda-forge imbalanced-learn
+
+```conda install -c conda-forge imbalanced-learn```
 
 Here are Classification methods which I would create and evaluate in my file:
-**Single Decision Tree 
-Ensemble classifier using samplers internally:**
+
+**Single Decision Tree** 
+
+**Ensemble classifier using samplers internally:**
+
 - Easy Ensemble classifier [1]
+
 - Balanced Random Forest [2]
-- Bagging
+
+- Bagging (Classifier)
+
 - Balanced Bagging [3]
+
 - Easy Ensemble [4]
+
 - RUSBoost [5]
+
 **Mini-batch resampling for Keras and Tensorflow (Deep Neural Network - MLP) [6]**
 
 
@@ -38,21 +57,35 @@ Ensemble classifier using samplers internally:**
 **Comparison of ensembling classifiers internally using sampling**
 
 **A. Data Engineering:**
+
 A.1. Load libraries
+
 A.2. Load an imbalanced dataset
+
 A.3. Data Exploration
+
 A.4. Check Missing or Nan
+
 A.5. Create X, y
-A.6. One hot encoding [7]
+
+A.6. One hot encoding [7] (One hot encoding is not ideally fit for Ensemble Classifiers so next time I will try to use Label Encoding for these kinds of imbalanced dataset instead.)
+
 A.7. Split data
+
 A.8. Unique values of each features
+
 A.9. Draw Pairplot
+
 A.10. Confusion Matrix Function
 
 **B. Comparison of Ensemble Classifiers [8], XGBoost Classifier [9][10][11], Deep Neural Network (Mini-batch resampling for Keras and Tensorflow)**
+
 - Confusion Matrix
+
 - Mean ROC AUC
+
 - Accuracy scores on Train / Test set (We should not rely on accuracy as it would be high and misleading. Instead, we should look at other metrics as confusion matrix, Balanced accuracy, Geometric mean, Precision, Recall, F1-score.
+
 - Classification report (Accuracy, Balanced accuracy, Geometric mean, Precision, Recall, F1-score)
 
 **C. Feature Importance**
@@ -66,8 +99,11 @@ A.10. Confusion Matrix Function
 **G. Predict**
 
 **H. New Policy on Trial:**
+
 H.1 List out
+
 H.2 Implement that New Policy
+
 H.3 Result
 
 
