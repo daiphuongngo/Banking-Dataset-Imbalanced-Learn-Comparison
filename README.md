@@ -14,7 +14,7 @@ tensorflow (optional)
 matplotlib(>=2.0.0)
 pandas(>=0.22)
 
-Installation: 
+**Installation:** 
 You should install imbalanced-learn on the PyPi's repository via pip from the begging and restart the runtime, then start your work:
 pip install -U imbalanced-learn
 
@@ -22,22 +22,22 @@ Anaconda Cloud platform:
 conda install -c conda-forge imbalanced-learn
 
 Here are Classification methods which I would create and evaluate in my file:
-Single Decision Tree 
-* Ensemble classifier using samplers internally:
+**Single Decision Tree 
+Ensemble classifier using samplers internally:**
 - Easy Ensemble classifier [1]
 - Balanced Random Forest [2]
 - Bagging
 - Balanced Bagging [3]
 - Easy Ensemble [4]
 - RUSBoost [5]
-Mini-batch resampling for Keras and Tensorflow (Deep Neural Network - MLP) [6]
+**Mini-batch resampling for Keras and Tensorflow (Deep Neural Network - MLP) [6]**
 
 
 **Table of Contents:**
 
-Comparison of ensembling classifiers internally using sampling
+**Comparison of ensembling classifiers internally using sampling**
 
-A. Data Engineering:
+**A. Data Engineering:**
 A.1. Load libraries
 A.2. Load an imbalanced dataset
 A.3. Data Exploration
@@ -49,29 +49,29 @@ A.8. Unique values of each features
 A.9. Draw Pairplot
 A.10. Confusion Matrix Function
 
-B. Ensemble Classifiers [8], XGBoost Classifier [9][10][11], Deep Neural Network (Mini-batch resampling for Keras and Tensorflow) 
+**B. Comparison of Ensemble Classifiers [8], XGBoost Classifier [9][10][11], Deep Neural Network (Mini-batch resampling for Keras and Tensorflow)**
 - Confusion Matrix
 - Mean ROC AUC
 - Accuracy scores on Train / Test set (We should not rely on accuracy as it would be high and misleading. Instead, we should look at other metrics as confusion matrix, Balanced accuracy, Geometric mean, Precision, Recall, F1-score.
 - Classification report (Accuracy, Balanced accuracy, Geometric mean, Precision, Recall, F1-score)
 
-C. Feature Importance
+**C. Feature Importance**
 
-D. Heatmap
+**D. Heatmap**
 
-E. Draw Single Decision Tree
+**E. Draw Single Decision Tree**
 
-F. ROC & AUC between Deep Neural Network, Ensemble Classifiers XGBoost Classifier
+**F. ROC & AUC between Deep Neural Network, Ensemble Classifiers, XGBoost Classifier**
 
-G. Predict
+**G. Predict**
 
-H. New Policy on Trial:
+**H. New Policy on Trial:**
 H.1 List out
 H.2 Implement that New Policy
 H.3 Result
 
 
-References:
+**References:**
 [1] https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.EasyEnsembleClassifier.html
 
 [2] https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.BalancedRandomForestClassifier.html
