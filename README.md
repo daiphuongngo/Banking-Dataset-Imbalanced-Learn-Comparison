@@ -8,7 +8,7 @@
 
 **Scope:**
 
-Use different classification methods to predict more accurately how many customers can be targeted for the next marketing campaign of banking term deposit sales while avoid overfitting.
+Use different classification methods to predict more accurately how many customers can be targeted for the next marketing campaign of banking term deposit sales while avoiding overfitting.
 
 **How to proceed:**
 
