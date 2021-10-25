@@ -1,5 +1,13 @@
 # banking-dataset-imbalanced-learn-comparison
 
+### Category:
+
+- Banking
+
+- Finance
+
+- Financial Institute
+
 ### Dataset: https://www.kaggle.com/prakharrathi25/banking-dataset-marketing-targets)
 
 test.csv & train.csv:
