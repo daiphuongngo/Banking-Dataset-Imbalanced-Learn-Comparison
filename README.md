@@ -35,6 +35,8 @@ Find the most important features of this dataset which can be used in policies t
 
 Imbalanced dataset could cause overfitting. We can not rely on Accuracy as a metric for imbalanced dataset (will be usually high and misleading) so we would use confusion matrix, balanced accuracy, geometric mean, F1 score instead. 
 
+![Imbalanced](https://user-images.githubusercontent.com/70437668/139254440-cd762722-bd78-4342-85d2-1cb474452d6c.jpg)
+
 **Target statement:**
 
 Selecting the best classification method which also can avoid overfitting.
@@ -122,11 +124,25 @@ A.8. Unique values of each features
 
 A.9. Draw Pairplot
 
+![Pairplot](https://user-images.githubusercontent.com/70437668/139254519-d6f6f7ea-e090-4571-aecb-cab8b527177a.jpg)
+
 A.10. Confusion Matrix Function
 
 **B. Comparison of Ensemble Classifiers [8], XGBoost Classifier [9][10][11], Deep Neural Network (Mini-batch resampling for Keras and Tensorflow)**
 
 - Confusion Matrix
+
+![DT Classifier](https://user-images.githubusercontent.com/70437668/139254549-6279da64-7e38-41bc-ae21-6034bd351945.jpg)
+
+![Bagging Classifier](https://user-images.githubusercontent.com/70437668/139254552-6370fdaf-aab8-437e-9fea-8ee0b53f9480.jpg)
+
+![Random Forest   Balanced Random Forest Confusion Matrix ](https://user-images.githubusercontent.com/70437668/139254564-3db7e51b-dbcc-486b-9547-46916b354b03.jpg)
+
+![Easy Ensemble Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254610-8729394f-7de3-4f55-8f46-f5910f2c4847.jpg)
+
+![RUS Boost Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254624-1849c05c-436f-417b-8fbc-3242c3679600.jpg)
+
+![XGB Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254632-f20cfa20-c252-45d1-bf00-3fa43b774b7a.jpg)
 
 - Mean ROC AUC
 
@@ -134,15 +150,57 @@ A.10. Confusion Matrix Function
 
 - Classification report (Accuracy, Balanced accuracy, Geometric mean, Precision, Recall, F1-score)
 
+![DT Report](https://user-images.githubusercontent.com/70437668/139254657-b832acc5-b3d0-4781-afe2-3b9e9bd17660.jpg)
+
+![Bagging rerport](https://user-images.githubusercontent.com/70437668/139254665-0b324e49-5409-48fc-87b4-f4fa918ac30f.jpg)
+
+![Balanced Bagging Report](https://user-images.githubusercontent.com/70437668/139254681-ad7ac256-719d-4521-a40b-7f9b58c92b56.jpg)
+
+![Random Forest   Balanced Random Forest Report](https://user-images.githubusercontent.com/70437668/139254694-3a6bf634-8e82-4792-9764-d04f3f7f5c58.jpg)
+
+![Balanced Random Forest Report](https://user-images.githubusercontent.com/70437668/139254710-776e358d-750b-4840-b216-b7c2d3b6f298.jpg)
+
+![Easy Ensemble Report](https://user-images.githubusercontent.com/70437668/139254724-2ae3b8f0-7d4c-42e6-ab5a-2f3344d9cafc.jpg)
+
+![RUS Boost Rerport](https://user-images.githubusercontent.com/70437668/139254754-798b3155-646f-42cd-96ac-1e83258b0910.jpg)
+
+![XGBoost Report](https://user-images.githubusercontent.com/70437668/139254761-1c245552-d73a-446e-9aa6-7181ba5ecc10.jpg)
+
+Draw Learning Curve for the Deep Neural Network
+
+![Draw Learning Curve](https://user-images.githubusercontent.com/70437668/139254770-25cca523-4764-4b8c-95fe-00b17ee3a97a.jpg)
+
+![Deep Neural Network Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254789-1a371afd-e0f8-4ec3-9395-b2e262352b4f.jpg)
+
+![Deep Neural Network Report](https://user-images.githubusercontent.com/70437668/139254837-ffb1b299-32a5-4d7b-9886-9822f0d270b7.jpg)
+
 **C. Feature Importance**
+
+![Feature Importance - Single Decision Tree](https://user-images.githubusercontent.com/70437668/139254858-49a41b1d-b905-4dbd-8c49-fa944a36efb3.jpg)
+
+![Feature Importance - Random Forest](https://user-images.githubusercontent.com/70437668/139254861-75aec9c5-a48a-4200-aab5-4f4f7fcee125.jpg)
+
+![Feature Importance - Balanced Random Forest](https://user-images.githubusercontent.com/70437668/139254870-c201edba-6c32-4d6b-a11a-7ae2b5a4dd3c.jpg)
+
+![Feature Importance - RUS Boost](https://user-images.githubusercontent.com/70437668/139254873-2f9b1054-4290-4fd4-925e-855d109187eb.jpg)
+
+![Feature Importance - XGBoost](https://user-images.githubusercontent.com/70437668/139254877-8f51e7c7-2015-4d1f-86d9-d07c5921e018.jpg)
 
 **D. Heatmap**
 
+![Heatmap](https://user-images.githubusercontent.com/70437668/139254892-e8a2ebcf-9b39-4317-92cf-59e4bdd13db6.jpg)
+
 **E. Draw Single Decision Tree**
+
+![Trees of Decision Tree](https://user-images.githubusercontent.com/70437668/139254926-c650a12c-7868-4d65-bba7-afa698d28919.jpg)
 
 **F. ROC & AUC between Deep Neural Network, Ensemble Classifiers, XGBoost Classifier**
 
+![ROC   AUC between Deep Neural Network, Ensemble Classifiers, XGBoost Classifier](https://user-images.githubusercontent.com/70437668/139254937-8c0765d7-7f11-484f-8663-305348c805c0.jpg)
+
 **G. Predict**
+
+![Predict](https://user-images.githubusercontent.com/70437668/139255130-152c9d0c-430b-48bc-8298-c947a9185257.jpg)
 
 **H. New Policy on Trial:**
 
@@ -152,6 +210,7 @@ H.2 Implement that New Policy
 
 H.3 Result
 
+![Result](https://user-images.githubusercontent.com/70437668/139254954-8ec8e891-4cbb-475e-a8a3-6af8f0754e2b.jpg)
 
 **References:**
 [1] https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.EasyEnsembleClassifier.html
