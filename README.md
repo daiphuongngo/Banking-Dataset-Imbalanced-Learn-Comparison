@@ -104,11 +104,17 @@ Here are Classification methods which I would create and evaluate in my file:
 
 **Comparison of ensembling classifiers internally using sampling**
 
+Ensembling classifiers have shown to improve classification performance compare to single learner. However, they will be affected by class imbalance. This example shows the benefit of balancing the training set before to learn learners. We are making the comparison with non-balanced ensemble methods, XGBoost Classifier and Deep Neural Network Model.
+
+We make a comparison using the balanced accuracy and geometric mean which are metrics widely used in the literature to evaluate models learned on imbalanced set.
+
 **A. Data Engineering:**
 
 A.1. Load libraries
 
 A.2. Load an imbalanced dataset
+
+In the train and test data, features that belong to similar groupings are tagged as such in the feature names (e.g., ind, reg, car, calc). In addition, feature names include the postfix bin to indicate binary features and cat to indicate categorical features. Features without these designations are either continuous or ordinal. Values of -1 indicate that the feature was missing from the observation. The target columns signifies whether or not a claim was filed for that policy holder.
 
 A.3. Data Exploration
 
@@ -132,15 +138,37 @@ A.10. Confusion Matrix Function
 
 - Confusion Matrix
 
+We use the training of Single Decision Tree classifier as a baseline to compare with other classifiers on this imbalanced dataset.
+
+Balanced accuracy and geometric mean are reported followingly as they are metrics widely used in the literature to validate model trained on imbalanced set.
+
 ![DT Classifier](https://user-images.githubusercontent.com/70437668/139254549-6279da64-7e38-41bc-ae21-6034bd351945.jpg)
+
+A number of estimators are built on various randomly selected data subsets in ensemble classifiers. But each data subset is not allowed to be balanced by Bagging classifier because the majority classes will be favored by it when implementing training on imbalanced data set.
+
+In contrast, each data subset is allowed to be resample in ordor to have each ensemble's estimator trained by the Balanced Bagging Classifier. This means the output of an Easy Ensemble sample with an ensemble of classifiers, Bagging Classifier for instance will be combined. So an advantage of Balanced Bagging Classifier over Bagging Classifier from scikit learn is that it takes the same parameters and also another two parameters, sampling stratgy and replacement to keep the random under-sampler's behavior under control.
 
 ![Bagging Classifier](https://user-images.githubusercontent.com/70437668/139254552-6370fdaf-aab8-437e-9fea-8ee0b53f9480.jpg)
 
+Random Forest is another popular ensemble method and it is usually outperforming bagging. Here, we used a vanilla random forest and its balanced counterpart in which each bootstrap sample is balanced.
+
 ![Random Forest   Balanced Random Forest Confusion Matrix ](https://user-images.githubusercontent.com/70437668/139254564-3db7e51b-dbcc-486b-9547-46916b354b03.jpg)
+
+In the same manner, Easy Ensemble classifier is a bag of balanced AdaBoost classifier. However, it will be slower to train than random forest and will achieve worse performance
+
+https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.EasyEnsembleClassifier.html
 
 ![Easy Ensemble Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254610-8729394f-7de3-4f55-8f46-f5910f2c4847.jpg)
 
+RUS Boost: Several methods taking advantage of boosting have been designed. RUSBoostClassifier randomly under-sample the dataset before to perform a boosting iteration. Random under-sampling integrating in the learning of an AdaBoost classifier. During learning, the problem of class balancing is alleviated by random under-sampling the sample at each iteration of the boosting algorithm.
+
+https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.RUSBoostClassifier.html?highlight=rusboost#imblearn.ensemble.RUSBoostClassifier
+
 ![RUS Boost Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254624-1849c05c-436f-417b-8fbc-3242c3679600.jpg)
+
+XGBoost provides a highly efficient implementation of the stochastic gradient boosting algorithm and access to a suite of model hyperparameters designed to provide control over the model training process.
+
+https://machinelearningmastery.com/xgboost-for-imbalanced-classification/
 
 ![XGB Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254632-f20cfa20-c252-45d1-bf00-3fa43b774b7a.jpg)
 
