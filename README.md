@@ -210,6 +210,10 @@ H.2 Implement that New Policy
 
 H.3 Result
 
+443 customers will be targeted for the term deposit campaign instead of 0 with entropy = ... when changing the duration (most influential feature by ... Classifier) to 200 for example (as long as the cross entropy greater than ....).
+
+When changing the duration to more than 800, 5445 customers will be targeted.
+
 ![Result](https://user-images.githubusercontent.com/70437668/139254954-8ec8e891-4cbb-475e-a8a3-6af8f0754e2b.jpg)
 
 **References:**
