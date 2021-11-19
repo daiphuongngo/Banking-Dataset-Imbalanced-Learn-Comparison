@@ -146,7 +146,7 @@ Balanced accuracy and geometric mean are reported followingly as they are metric
 
 A number of estimators are built on various randomly selected data subsets in ensemble classifiers. But each data subset is not allowed to be balanced by Bagging classifier because the majority classes will be favored by it when implementing training on imbalanced data set.
 
-In contrast, each data subset is allowed to be resample in ordor to have each ensemble's estimator trained by the Balanced Bagging Classifier. This means the output of an Easy Ensemble sample with an ensemble of classifiers, Bagging Classifier for instance will be combined. So an advantage of Balanced Bagging Classifier over Bagging Classifier from scikit learn is that it takes the same parameters and also another two parameters, sampling stratgy and replacement to keep the random under-sampler's behavior under control.
+In contrast, each data subset is allowed to be resample in order to have each ensemble's estimator trained by the Balanced Bagging Classifier. This means the output of an Easy Ensemble sample with an ensemble of classifiers, Bagging Classifier for instance will be combined. So an advantage of Balanced Bagging Classifier over Bagging Classifier from scikit learn is that it takes the same parameters and also another two parameters, sampling strategy and replacement to keep the random under-sampler's behavior under control.
 
 ![Bagging Classifier](https://user-images.githubusercontent.com/70437668/139254552-6370fdaf-aab8-437e-9fea-8ee0b53f9480.jpg)
 
@@ -154,7 +154,7 @@ Random Forest is another popular ensemble method and it is usually outperforming
 
 ![Random Forest   Balanced Random Forest Confusion Matrix ](https://user-images.githubusercontent.com/70437668/139254564-3db7e51b-dbcc-486b-9547-46916b354b03.jpg)
 
-In the same manner, Easy Ensemble classifier is a bag of balanced AdaBoost classifier. However, it will be slower to train than random forest and will achieve worse performance
+In the same manner, Easy Ensemble classifier is a bag of balanced AdamBoost classifier. However, it will be slower to train than random forest and will achieve worse performance
 
 https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.EasyEnsembleClassifier.html
 
