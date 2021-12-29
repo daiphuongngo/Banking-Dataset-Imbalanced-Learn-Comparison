@@ -1,6 +1,6 @@
 # banking-dataset-imbalanced-learn-comparison
 
-### Category:
+## Category:
 
 - Banking
 
@@ -8,22 +8,22 @@
 
 - Financial Institute
 
-### Dataset: https://www.kaggle.com/prakharrathi25/banking-dataset-marketing-targets)
+## Dataset: https://www.kaggle.com/prakharrathi25/banking-dataset-marketing-targets)
 
 test.csv & train.csv:
 
 | age | job | marital | education | default | balance | housing | loan | contact | day | 
 |-|-|-|-|-|-|-|-|-|-|
 
-**Overview:** 
+## Overview:
 
 “Term deposits are a major source of income for a bank. A term deposit is a cash investment held at a financial institution. Your money is invested for an agreed rate of interest over a fixed amount of time, or term. The bank has various outreach plans to sell term deposits to their customers such as email marketing, advertisements, telephonic marketing, and digital marketing. Telephonic marketing campaigns still remain one of the most effective way to reach out to people. However, they require huge investment as large call centers are hired to actually execute these campaigns. Hence, it is crucial to identify the customers most likely to convert beforehand so that they can be specifically targeted via call.”
 
-**Scope:**
+## Scope:
 
 Use different classification methods to predict more accurately how many customers can be targeted for the next marketing campaign of banking term deposit sales while avoiding overfitting.
 
-**How to proceed:**
+## How to proceed:
 
 Use different models such as Single Decision Tree, Ensemble Classifiers (Bagging, Balanced Bagging, Random Forest, Balanced Random Forest, Easy Ensemble Classifier, RUS Boost), XGBoost, Deep Neural Network to evaluate their performances on both imbalanced Train and Test set while avoid fitting.
 
@@ -31,49 +31,54 @@ Different metrics such as Accuracy (we do not rely on this one), Balanced Accura
 
 Find the most important features of this dataset which can be used in policies to predict number of ‘Not Subscribed’ or ‘Subscribed’ customers after applying those new changes.
 
-**Problem statement:** 
+## Problem statement:
 
 Imbalanced dataset could cause overfitting. We can not rely on Accuracy as a metric for imbalanced dataset (will be usually high and misleading) so we would use confusion matrix, balanced accuracy, geometric mean, F1 score instead. 
 
 ![Imbalanced](https://user-images.githubusercontent.com/70437668/139254440-cd762722-bd78-4342-85d2-1cb474452d6c.jpg)
 
-**Target statement:**
+## Target statement:
 
 Selecting the best classification method which also can avoid overfitting.
 
-**Target achievement:**
+## Target achievement:
 
 RUS Boost has the highest Balanced Accuracy, Geometric Mean, F1 score and the best Confusion Matrix among all classification methods.
 
+## Room for improvement:
+
+- Use one or two AutoML tools such as H20.ai to generate the metrics much faster than the Sckit-Learn, Keras or Tensorflow.
+
+## Dependencies:
 
 imbalanced-learn offers a number of re-sampling techniques commonly used in strong between-class imbalanced datasets. This Python package is also compatible with scikit-learn.
 
 In my case, I got the same error "dot: graph is too large for cairo-renderer bitmaps. scaling by 0.0347552 to fit" all of the time when running the Balanced Random Forest on old version of Colab Notebooks. Here are dependencies of imbalanced-learn:
 
-Python 3.6+
+- Python 3.6+
 
-scipy(>=0.19.1)
+- scipy(>=0.19.1)
 
-numpy(>=1.13.3)
+- numpy(>=1.13.3)
 
-scikit-learn(>=0.23)
+- scikit-learn(>=0.23)
 
-joblib(>=0.11)
+- joblib(>=0.11)
 
-keras 2 (optional)
+- keras 2 (optional)
 
-tensorflow (optional)
+- tensorflow (optional)
 
-matplotlib(>=2.0.0)
+- matplotlib(>=2.0.0)
 
-pandas(>=0.22)
+- pandas(>=0.22)
 
-**Installation:** 
+## Installation:
 
 You should install imbalanced-learn on the PyPi's repository via pip from the begging and restart the runtime, then start your work:
 ```pip install -U imbalanced-learn```
 
-Anaconda Cloud platform: 
+### Anaconda Cloud platform: 
 
 ```conda install -c conda-forge imbalanced-learn```
 
