@@ -53,6 +53,8 @@ RUS Boost has the highest Balanced Accuracy, Geometric Mean, F1 score and the be
 
 - Use one or two AutoML tools such as H20.ai to generate the metrics much faster than the Sckit-Learn, Keras or Tensorflow.
 
+- Apply the Tensorflow's Classification method on the Credit Card Fraud Detection case for this project: https://drive.google.com/file/d/1TrKRiNGxrxkr3i1ugc7DFF7XrfHZ9tmk/view?usp=sharing
+
 ## Dependencies:
 
 imbalanced-learn offers a number of re-sampling techniques commonly used in strong between-class imbalanced datasets. This Python package is also compatible with scikit-learn.
