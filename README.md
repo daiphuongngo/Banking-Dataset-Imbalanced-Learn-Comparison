@@ -55,6 +55,12 @@ RUS Boost has the highest Balanced Accuracy, Geometric Mean, F1 score and the be
 
 - Apply the Tensorflow's Classification method on the Credit Card Fraud Detection case for this project: https://drive.google.com/file/d/1TrKRiNGxrxkr3i1ugc7DFF7XrfHZ9tmk/view?usp=sharing
 
+- Apply Label Encoding instead of One Hot Encoding to fit Ensemble Classifiers better
+
+- Use Graphviz to draw tree, H2O to create models (of tree, forest) from beginning instead of Scikit-learn
+
+- Try out other methods: Oversampling, SMOTE, etc to avoid Overfitting more efficiently
+
 ## Dependencies:
 
 imbalanced-learn offers a number of re-sampling techniques commonly used in strong between-class imbalanced datasets. This Python package is also compatible with scikit-learn.
