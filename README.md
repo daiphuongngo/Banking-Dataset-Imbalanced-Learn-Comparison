@@ -47,8 +47,10 @@ Selecting the best classification method which also can avoid overfitting.
 
 ## Target achievement:
 
-RUS Boost is the best classifier with the second-highest Balanced Accuracy=0.84 on both sets, highest Geometric Mean=0.84, F1 score=0.57, Confusion Matrix [[4721 828][132 648]], Feature Importance on ‘duration’ variable > 0.30, ROC AUC=0.92 among Machine, Deep learning classifiers while the 2nd-ranked classifier XGBoost had the highest Balanced Accuracy=0.90 on both sets, Geometric Mean=0.49, low F1 score=0.26, , Confusion Matrix [[5477 72][592 188]], Feature Importance on ‘duration’ reaching nearly 0.20, ROC AUC=0.88.
+- RUS Boost is the best classifier with the second-highest Balanced Accuracy=0.84 on both sets, highest Geometric Mean=0.84, F1 score=0.57, Confusion Matrix [[4721 828][132 648]], Feature Importance on ‘duration’ variable > 0.30, ROC AUC=0.92 among Machine, Deep learning classifiers while the 2nd-ranked classifier XGBoost had the highest Balanced Accuracy=0.90 on both sets, Geometric Mean=0.49, low F1 score=0.26, , Confusion Matrix [[5477 72][592 188]], Feature Importance on ‘duration’ reaching nearly 0.20, ROC AUC=0.88.
 
+- 443 customers will be targeted for the term deposit campaign instead of 0 with duration = 150 (<= 162.5) when changing the duration (the most influential feature by RUS Boost Classifier policies to predict potential ‘Subscribed’ customers) to 200 for example (as long as the gini >= 0.472). After modifying the duration to more than 800, 5,445 customers will be targeted.
+- 
 ## Room for improvement:
 
 - Use one or two AutoML tools such as H20.ai to generate the metrics much faster than the Sckit-Learn, Keras or Tensorflow.
@@ -255,7 +257,7 @@ H.2 Implement that New Policy
 
 H.3 Result
 
-443 customers will be targeted for the term deposit campaign instead of 0 with duration = 150 (<= 162.5) when changing the duration (the most influential feature by Single Decision Tree Classifier) to 200 for example (as long as the gini >= 0.472). After modifying the duration to more than 800, 5,445 customers will be targeted.
+- 443 customers will be targeted for the term deposit campaign instead of 0 with duration = 150 (<= 162.5) when changing the duration (the most influential feature by RUS Boost Classifier policies to predict potential ‘Subscribed’ customers) to 200 for example (as long as the gini >= 0.472). After modifying the duration to more than 800, 5,445 customers will be targeted.
 
 ![Result](https://user-images.githubusercontent.com/70437668/139254954-8ec8e891-4cbb-475e-a8a3-6af8f0754e2b.jpg)
 
