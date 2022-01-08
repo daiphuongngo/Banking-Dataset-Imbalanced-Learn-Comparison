@@ -57,13 +57,19 @@ Selecting the best classification method which also can avoid overfitting.
 
 --> I personally like the H20.ai as it consume less time to provide an output of more (all) necessary metrics while the other libraries takes hours to run all classifiers and DNN  although I use mainly CPU on Google Colab Notebook. So, I will run and publish another notebook with H20.ai soon.
 
+Reference: https://docs.h2o.ai/h2o/latest-stable/h2o-docs/data-science.html
+
 - Apply the Tensorflow's Classification method on the Credit Card Fraud Detection case for this project: https://drive.google.com/file/d/1TrKRiNGxrxkr3i1ugc7DFF7XrfHZ9tmk/view?usp=sharing
 
 - Apply Label Encoding instead of One Hot Encoding to fit Ensemble Classifiers better
 
-- Use Graphviz to draw tree
+- Use Graphviz to draw tree as the roots can be too broad 
 
-- Try out other methods: Oversampling, SMOTE, etc to avoid Overfitting more efficiently
+--> Graphiz can distribute higher definition for the output picture.
+
+- Try out other methods: Oversampling, SMOTE, etc to avoid Overfitting in different ways
+
+--> This can be found on Kaggle's top voted notebooks
 
 ## Dependencies:
 
@@ -102,26 +108,26 @@ Here are Classification methods which I would create and evaluate in my file:
 
 **Single Decision Tree** 
 
-**Ensemble classifier using samplers internally:**
+Ensemble classifier using samplers internally:
 
-- Easy Ensemble classifier [1]
+**Easy Ensemble classifier** [1]
 
-- Random Forest (This model has 27MB so I will not upload it here.)
+**Random Forest** (This model has 27MB so I will not upload it here.)
 
-- Balanced Random Forest [2] (This model has 32MB so I will not upload it here.)
+**Balanced Random Forest **[2] (This model has 32MB so I will not upload it here.)
 
-- Bagging (Classifier)
+**Bagging** 
 
-- Balanced Bagging [3]
+**Balanced Bagging** [3]
 
-- Easy Ensemble [4]
+**Easy Ensemble** [4]
 
-- RUSBoost [5]
+**RUSBoost** [5]
 
-**Mini-batch resampling for Keras and Tensorflow (Deep Neural Network - MLP) [6]**
+**Mini-batch resampling for Keras and Tensorflow (Deep Neural Network - MLP)** [6]
 
 
-**Table of Contents:**
+### Table of Contents:
 
 **Comparison of ensembling classifiers internally using sampling**
 
