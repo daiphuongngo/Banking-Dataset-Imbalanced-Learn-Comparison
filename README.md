@@ -12,12 +12,14 @@
 
 - Python 
 
-## Dataset: https://www.kaggle.com/prakharrathi25/banking-dataset-marketing-targets)
+## Dataset: 
+
+https://www.kaggle.com/prakharrathi25/banking-dataset-marketing-targets)
 
 test.csv & train.csv:
 
-| age | job | marital | education | default | balance | housing | loan | contact | day | 
-|-|-|-|-|-|-|-|-|-|-|
+| age | job | marital | education | default | balance | housing | loan | contact | day | month | duration | campaign | pdays | previous | poutcome | y |
+|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
 
 ## Overview:
 
