@@ -161,10 +161,11 @@ A.9. Draw Pairplot
 
 A.10. Confusion Matrix Function
 
-**B. Comparison of Ensemble Classifiers [8], XGBoost Classifier [9][10][11], Deep Neural Network (Mini-batch resampling for Keras and Tensorflow)**
+**B. Comparison of Classiers**
 
 - Confusion Matrix
 
+#### Decision Tree 
 I used the training of Single Decision Tree classifier as a baseline to compare with other classifiers on this imbalanced dataset.
 
 Decision Trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features. A tree can be seen as a piecewise constant approximation.
@@ -173,23 +174,33 @@ Balanced accuracy and geometric mean are reported followingly as they are metric
 
 ![DT Classifier](https://user-images.githubusercontent.com/70437668/139254549-6279da64-7e38-41bc-ae21-6034bd351945.jpg)
 
+#### Bagging
+
 A Bagging classifier is an ensemble meta-estimator that fits base classifiers each on random subsets of the original dataset and then aggregate their individual predictions (either by voting or by averaging) to form a final prediction. Such a meta-estimator can typically be used as a way to reduce the variance of a black-box estimator (e.g., a decision tree), by introducing randomization into its construction procedure and then making an ensemble out of it.
 
 A number of estimators are built on various randomly selected data subsets in ensemble classifiers. But each data subset is not allowed to be balanced by Bagging classifier because the majority classes will be favored by it when implementing training on imbalanced data set.
 
 In contrast, each data subset is allowed to be resample in order to have each ensemble's estimator trained by the Balanced Bagging Classifier. This means the output of an Easy Ensemble sample with an ensemble of classifiers, Bagging Classifier for instance will be combined. So an advantage of Balanced Bagging Classifier over Bagging Classifier from scikit learn is that it takes the same parameters and also another two parameters, sampling strategy and replacement to keep the random under-sampler's behavior under control.
 
+#### Balanced Bagging
+
 A Bagging classifier with additional balancing. This implementation of Bagging is similar to the scikit-learn implementation. It includes an additional step to balance the training set at fit time using a given sampler. This classifier can serves as a basis to implement various methods such as Exactly Balanced Bagging, Roughly Balanced Bagging, Over-Bagging, or SMOTE-Bagging.
 
 ![Bagging Classifier](https://user-images.githubusercontent.com/70437668/139254552-6370fdaf-aab8-437e-9fea-8ee0b53f9480.jpg)
+
+#### Random Forest 
 
 Random Forest is another popular ensemble method and it is usually outperforming bagging. Here, I used a vanilla random forest and its balanced counterpart in which each bootstrap sample is balanced. 
 
 A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. The sub-sample size is controlled with the max_samples parameter if bootstrap=True (default), otherwise the whole dataset is used to build each tree.
 
+#### Balanced Random Forest 
+
 A balanced random forest randomly under-samples each boostrap sample to balance it.
 
 ![Random Forest   Balanced Random Forest Confusion Matrix ](https://user-images.githubusercontent.com/70437668/139254564-3db7e51b-dbcc-486b-9547-46916b354b03.jpg)
+
+#### Easy Ensemble
 
 In the same manner, Easy Ensemble classifier is a bag of balanced AdamBoost classifier. However, it will be slower to train than random forest and will achieve worse performance
 
@@ -199,11 +210,15 @@ https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.Ea
 
 ![Easy Ensemble Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254610-8729394f-7de3-4f55-8f46-f5910f2c4847.jpg)
 
-RUS Boost: Several methods taking advantage of boosting have been designed. RUSBoostClassifier randomly under-sample the dataset before to perform a boosting iteration. Random under-sampling integrating in the learning of an AdaBoost classifier. During learning, the problem of class balancing is alleviated by random under-sampling the sample at each iteration of the boosting algorithm.
+#### RUS Boost
+
+Several methods taking advantage of boosting have been designed. RUSBoostClassifier randomly under-sample the dataset before to perform a boosting iteration. Random under-sampling integrating in the learning of an AdaBoost classifier. During learning, the problem of class balancing is alleviated by random under-sampling the sample at each iteration of the boosting algorithm.
 
 https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.RUSBoostClassifier.html?highlight=rusboost#imblearn.ensemble.RUSBoostClassifier
 
 ![RUS Boost Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254624-1849c05c-436f-417b-8fbc-3242c3679600.jpg)
+
+#### XGBoost
 
 "Boosting is a strong alternative to bagging. Instead of aggregating predictions, boosters turn weak learners into strong learners by focusing on where the individual models (usually Decision Trees) went wrong. In Gradient Boosting, individual models train upon the residuals, the difference between the prediction and the actual results. Instead of aggregating trees, gradient boosted trees learns from errors during each boosting round.
 
@@ -239,7 +254,7 @@ https://machinelearningmastery.com/xgboost-for-imbalanced-classification/
 
 ![XGBoost Report](https://user-images.githubusercontent.com/70437668/139254761-1c245552-d73a-446e-9aa6-7181ba5ecc10.jpg)
 
-Draw Learning Curve for the Deep Neural Network
+#### Deep Neural Network
 
 ![Draw Learning Curve](https://user-images.githubusercontent.com/70437668/139254770-25cca523-4764-4b8c-95fe-00b17ee3a97a.jpg)
 
