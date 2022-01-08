@@ -14,7 +14,7 @@
 
 ## Dataset: 
 
-https://www.kaggle.com/prakharrathi25/banking-dataset-marketing-targets)
+https://www.kaggle.com/prakharrathi25/banking-dataset-marketing-targets
 
 test.csv & train.csv:
 
