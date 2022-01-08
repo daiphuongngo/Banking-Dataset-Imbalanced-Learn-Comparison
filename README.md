@@ -114,7 +114,7 @@ Ensemble classifier using samplers internally:
 
 **Random Forest** (This model has 27MB so I will not upload it here.)
 
-**Balanced Random Forest **[2] (This model has 32MB so I will not upload it here.)
+**Balanced Random Forest** [2] (This model has 32MB so I will not upload it here.)
 
 **Bagging** 
 
@@ -179,13 +179,21 @@ A number of estimators are built on various randomly selected data subsets in en
 
 In contrast, each data subset is allowed to be resample in order to have each ensemble's estimator trained by the Balanced Bagging Classifier. This means the output of an Easy Ensemble sample with an ensemble of classifiers, Bagging Classifier for instance will be combined. So an advantage of Balanced Bagging Classifier over Bagging Classifier from scikit learn is that it takes the same parameters and also another two parameters, sampling strategy and replacement to keep the random under-sampler's behavior under control.
 
+A Bagging classifier with additional balancing. This implementation of Bagging is similar to the scikit-learn implementation. It includes an additional step to balance the training set at fit time using a given sampler. This classifier can serves as a basis to implement various methods such as Exactly Balanced Bagging, Roughly Balanced Bagging, Over-Bagging, or SMOTE-Bagging.
+
 ![Bagging Classifier](https://user-images.githubusercontent.com/70437668/139254552-6370fdaf-aab8-437e-9fea-8ee0b53f9480.jpg)
 
-Random Forest is another popular ensemble method and it is usually outperforming bagging. Here, I used a vanilla random forest and its balanced counterpart in which each bootstrap sample is balanced.
+Random Forest is another popular ensemble method and it is usually outperforming bagging. Here, I used a vanilla random forest and its balanced counterpart in which each bootstrap sample is balanced. 
+
+A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. The sub-sample size is controlled with the max_samples parameter if bootstrap=True (default), otherwise the whole dataset is used to build each tree.
+
+A balanced random forest randomly under-samples each boostrap sample to balance it.
 
 ![Random Forest   Balanced Random Forest Confusion Matrix ](https://user-images.githubusercontent.com/70437668/139254564-3db7e51b-dbcc-486b-9547-46916b354b03.jpg)
 
 In the same manner, Easy Ensemble classifier is a bag of balanced AdamBoost classifier. However, it will be slower to train than random forest and will achieve worse performance
+
+In another way, bag of balanced boosted learners also known as EasyEnsemble. This algorithm is known as EasyEnsemble [1]. The classifier is an ensemble of AdaBoost learners trained on different balanced boostrap samples. The balancing is achieved by random under-sampling.
 
 https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.EasyEnsembleClassifier.html
 
@@ -196,6 +204,12 @@ RUS Boost: Several methods taking advantage of boosting have been designed. RUSB
 https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.ensemble.RUSBoostClassifier.html?highlight=rusboost#imblearn.ensemble.RUSBoostClassifier
 
 ![RUS Boost Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254624-1849c05c-436f-417b-8fbc-3242c3679600.jpg)
+
+"Boosting is a strong alternative to bagging. Instead of aggregating predictions, boosters turn weak learners into strong learners by focusing on where the individual models (usually Decision Trees) went wrong. In Gradient Boosting, individual models train upon the residuals, the difference between the prediction and the actual results. Instead of aggregating trees, gradient boosted trees learns from errors during each boosting round.
+
+XGBoost is short for “eXtreme Gradient Boosting.” The “eXtreme” refers to speed enhancements such as parallel computing and cache awareness that makes XGBoost approximately 10 times faster than traditional Gradient Boosting. In addition, XGBoost includes a unique split-finding algorithm to optimize trees, along with built-in regularization that reduces overfitting. Generally speaking, XGBoost is a faster, more accurate version of Gradient Boosting.
+
+Boosting performs better than bagging on average, and Gradient Boosting is arguably the best boosting ensemble. Since XGBoost is an advanced version of Gradient Boosting, and its results are unparalleled, it’s arguably the best machine learning ensemble that we have."
 
 XGBoost provides a highly efficient implementation of the stochastic gradient boosting algorithm and access to a suite of model hyperparameters designed to provide control over the model training process.
 
