@@ -53,13 +53,15 @@ Selecting the best classification method which also can avoid overfitting.
 
 ## Room for improvement:
 
-- Use one or two AutoML tools such as H20.ai to generate the metrics much faster than the Sckit-Learn, Keras or Tensorflow.
+- Use one or two AutoML tools such as H20.ai to create models (tree, forest) and generate the metrics much faster than the Sckit-Learn, Keras or Tensorflow.
+
+--> I personally like the H20.ai as it consume less time to provide an output of more (all) necessary metrics while the other libraries takes hours to run all classifiers and DNN  although I use mainly CPU on Google Colab Notebook. So, I will run and publish another notebook with H20.ai soon.
 
 - Apply the Tensorflow's Classification method on the Credit Card Fraud Detection case for this project: https://drive.google.com/file/d/1TrKRiNGxrxkr3i1ugc7DFF7XrfHZ9tmk/view?usp=sharing
 
 - Apply Label Encoding instead of One Hot Encoding to fit Ensemble Classifiers better
 
-- Use Graphviz to draw tree, H2O to create models (of tree, forest) from beginning instead of Scikit-learn
+- Use Graphviz to draw tree
 
 - Try out other methods: Oversampling, SMOTE, etc to avoid Overfitting more efficiently
 
