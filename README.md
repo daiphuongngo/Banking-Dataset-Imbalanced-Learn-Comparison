@@ -41,6 +41,18 @@ Find the most important features of this dataset which can be used in policies t
 
 Imbalanced dataset could cause overfitting. We can not rely on Accuracy as a metric for imbalanced dataset (will be usually high and misleading) so we would use confusion matrix, balanced accuracy, geometric mean, F1 score instead. 
 
+Overfitting is when ML models are overly complicated they tend to memorize the training data, resulting in low generalization capability. Techniques to prevent overfitting:
+
+- Feature selection removes unimportant features, hence reducing model complexity.
+
+- Regularization adds a penality term for model complexity to the loss function to optimize, forcing the search algorithm to balance between training accuracy and simplicity of the solution model.
+
+- Early stopping uses validation set to track generalization capability of ML models and stops training further when the solution model starts overfitting. 
+
+- Dropout randomly switches off weights/parameters during training (but uses *all* after training, with [activation scaling](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dropout)) which effectively adds a regularization term in the training loss.
+
+- Batchnorm *standardizes* the input batch to each layer of a network, making the optimization landscape significantly smoother and allowing for faster training. See [NeurIPS'18](https://papers.nips.cc/paper/7515-how-does-batch-normalization-help-optimization.pdf).
+- 
 ![Imbalanced](https://user-images.githubusercontent.com/70437668/139254440-cd762722-bd78-4342-85d2-1cb474452d6c.jpg)
 
 ## Target statement:
