@@ -290,6 +290,82 @@ MLPs are suitable for classification prediction problems where inputs are assign
 
 In this project, I used MLPs for the Classification prediction problems on the imbalanced Banking Dataset to predict Subscribed or Non-Subscribed customers. They are very flexible and can be used generally to learn a mapping from inputs to outputs. After feeding to the MLP and training them, I would at the common metrics to compare with those of other classifers. It would be worth at least testing the MLPs on this problem. The results can be used as a baseline point of comparison to confirm that other models that may appear better suited and add more value.
 
+**Initiate optimizer**
+
+- Compile model by this command:
+
+```
+model.compile(loss='', optimizer='adam', metrics=''
+```
+
+When compiling by the above method, optimizer will use the default learning rate by the system. To input a preferred learning rate, I have to initiate optimizer.
+
+```
+from tensorflow.keras.optimizers import Adam, RMSprop, SGD, ...
+
+my_optimizer = Adam(learning_rate = 0.01)
+# or
+my_optimizer = SGD(learning_rate = 0.01, momentum = 0.9)
+# or
+my_optimizer = RMSprop(learning_rate = 0.01, momentum = 0.9)
+
+model.compile(loss='', optimizer=my_optimizer, metrics='')
+```
+
+Common learning rates include 0.1 or 0.01 or 0.001.
+
+Common momentums include 0.9 or 0.8.
+
+**Initiate model**
+
+There are 2 ways to initiate model in Keras:
+
+*   Method 1: use Sequential
+
+```
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+model = Sequential()
+model.add(Dense(16, activation='relu', input_shape=X.shape[1:]))
+...
+model.add(Dense(1, activation='sigmoid'))
+```
+
+*   Method 2: use Model
+
+```
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense, Input
+
+input = Input(shape=X.shape[1:])
+layer_1 = Dense(16, activation='relu')(input)
+layer_2 = Dense(16, activation='relu')(layer_1)
+layer_3 = Dense(16, activation='relu')(layer_2)
+output = Dense(1, activation='sigmoid')(layer_3)
+
+model=Model(input, output)
+```
+
+**Plot charts after training**
+
+```
+model.compile(loss='mse', optimizer='', metrics=['mae',RootMeanSquaredError()])
+
+history = model.fit(X_train, y_train, epochs=50)
+```
+At this time, the object history will save 3 metrics 'loss',  'mae', 'root_mean_squared_error' after 50 epochs. To see the saved metrics, I use this command:
+
+```
+print(history.history.keys())
+```
+
+To draw chart for loss after 50 epochs, I use this command:
+
+```
+plt.plot(history.history['loss']) # loss is one of ouput's metrics generated after calling the above function print()
+```
+
 ![Draw Learning Curve](https://user-images.githubusercontent.com/70437668/139254770-25cca523-4764-4b8c-95fe-00b17ee3a97a.jpg)
 
 ![Deep Neural Network Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254789-1a371afd-e0f8-4ec3-9395-b2e262352b4f.jpg)
