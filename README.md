@@ -184,6 +184,14 @@ I used the training of Single Decision Tree classifier as a baseline to compare 
 
 Decision Trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features. A tree can be seen as a piecewise constant approximation.
 
+Here are the main differences between nonlinear models MLPs and Decision Trees
+- 1) Decision boundary: arbitrary curves for MLPs but *segments* parallel with axes for Decision Trees. For regression surface: arbitrary for MLPs but *block-wise* for Decision Trees; 
+- 2) Explainability 
+
+Talking about the Decision Trees' predicted output, I should look at how outputs are calculated and how to measure its quality:
+- For regression: average of data subset at leaf nodes; smaller spreading (standard deviation) is better. 
+- For classification: majority label of data subset at leaf nodes; smaller entropy is better. 
+
 Balanced accuracy and geometric mean are reported followingly as they are metrics widely used in the literature to validate model trained on imbalanced set.
 
 ![DT Classifier](https://user-images.githubusercontent.com/70437668/139254549-6279da64-7e38-41bc-ae21-6034bd351945.jpg)
