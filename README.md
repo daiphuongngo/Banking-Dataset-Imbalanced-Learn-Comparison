@@ -52,7 +52,7 @@ Overfitting is when ML models are overly complicated they tend to memorize the t
 - Dropout randomly switches off weights/parameters during training (but uses *all* after training, with [activation scaling](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dropout)) which effectively adds a regularization term in the training loss.
 
 - Batchnorm *standardizes* the input batch to each layer of a network, making the optimization landscape significantly smoother and allowing for faster training. See [NeurIPS'18](https://papers.nips.cc/paper/7515-how-does-batch-normalization-help-optimization.pdf).
-- 
+
 ![Imbalanced](https://user-images.githubusercontent.com/70437668/139254440-cd762722-bd78-4342-85d2-1cb474452d6c.jpg)
 
 ## Target statement:
