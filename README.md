@@ -270,6 +270,12 @@ https://machinelearningmastery.com/xgboost-for-imbalanced-classification/
 
 #### Deep Neural Network
 
+Multilayer Perceptrons, or MLPs for short, are the classical type of neural network. They are comprised of one or more layers of neurons. Data is fed to the input layer, there may be one or more hidden layers providing levels of abstraction, and predictions are made on the output layer, also called the visible layer.
+
+MLPs are suitable for classification prediction problems where inputs are assigned a class or label. They are also suitable for regression prediction problems where a real-valued quantity is predicted given a set of inputs. Data is often provided in a tabular format, such as you would see in a CSV file or a spreadsheet.
+
+In this project, I used MLPs for the Classification prediction problems on the imbalanced Banking Dataset to predict Subscribed or Non-Subscribed customers. They are very flexible and can be used generally to learn a mapping from inputs to outputs. After feeding to the MLP and training them, I would at the common metrics to compare with those of other classifers. It would be worth at least testing the MLPs on this problem. The results can be used as a baseline point of comparison to confirm that other models that may appear better suited and add more value.
+
 ![Draw Learning Curve](https://user-images.githubusercontent.com/70437668/139254770-25cca523-4764-4b8c-95fe-00b17ee3a97a.jpg)
 
 ![Deep Neural Network Confusion Matrix](https://user-images.githubusercontent.com/70437668/139254789-1a371afd-e0f8-4ec3-9395-b2e262352b4f.jpg)
