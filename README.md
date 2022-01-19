@@ -25,6 +25,10 @@ test.csv & train.csv:
 
 “Term deposits are a major source of income for a bank. A term deposit is a cash investment held at a financial institution. Your money is invested for an agreed rate of interest over a fixed amount of time, or term. The bank has various outreach plans to sell term deposits to their customers such as email marketing, advertisements, telephonic marketing, and digital marketing. Telephonic marketing campaigns still remain one of the most effective way to reach out to people. However, they require huge investment as large call centers are hired to actually execute these campaigns. Hence, it is crucial to identify the customers most likely to convert beforehand so that they can be specifically targeted via call.”
 
+## Courtesy:
+
+This projects was conducted by me during my last AI Practitioner class at the Center of Talent in AI (CoTAI), Sai Gon, Vietnam right before moving to Toronto, Canada. Hereby, I thank Mr. Hung Ngo - Founder of CoTAI and Mr. Huy Le - my supervisor there who had provided support, vision, guidance, training through this final project for the class. The ideas were completely came up by me. The origin of this dataset can be found on Kaggle. I had applied what I learned from this AI Pracitioner class and other reference/resources to conduct this analysis and upload it to my e-portoflio as a proof of project experience. This project can also be upgraded, expanded as per my noted Room for Improvement below.
+
 ## Scope:
 
 Use different classification methods to predict more accurately how many customers can be targeted for the next marketing campaign of banking term deposit sales while avoiding overfitting.
