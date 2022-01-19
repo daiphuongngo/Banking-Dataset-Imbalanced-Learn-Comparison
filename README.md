@@ -27,7 +27,7 @@ test.csv & train.csv:
 
 ## Courtesy:
 
-This projects was conducted by me during my last AI Practitioner class at the Center of Talent in AI (CoTAI), Sai Gon, Vietnam right before moving to Toronto, Canada. Hereby, I thank Mr. Hung Ngo - Founder of CoTAI and Mr. Huy Le - my supervisor there who had provided support, vision, guidance, training through this final project for the class. The ideas were completely came up by me. The origin of this dataset can be found on Kaggle. I had applied what I learned from this AI Pracitioner class and other reference/resources to conduct this analysis and upload it to my e-portoflio as a proof of project experience. This project can also be upgraded, expanded as per my noted Room for Improvement below.
+This project was conducted by me during my last AI Practitioner class at the Center of Talent in AI (CoTAI), Sai Gon, Vietnam right before moving to Toronto, Canada. Hereby, I thank Mr. Hung Ngo - Founder of CoTAI and Mr. Huy Le - my supervisor there who had provided support, vision, guidance, training through this final project for the class. The ideas were completely came up by me. The origin of this dataset can be found on Kaggle. I had applied what I learned from this AI Pracitioner class and other reference/resources to conduct this analysis and upload it to my e-portoflio as a proof of project experience. This project can also be upgraded, expanded as per my noted Room for Improvement below.
 
 ## Scope:
 
