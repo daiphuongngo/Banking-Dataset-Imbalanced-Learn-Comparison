@@ -115,7 +115,7 @@ In my case, I got the same error "dot: graph is too large for cairo-renderer bit
 
 ## Installation:
 
-You should install imbalanced-learn on the PyPi's repository via pip from the begging and restart the runtime, then start your work:
+I had to install imbalanced-learn on the PyPi's repository via pip from the begging and restart the runtime, then start my work:
 ```pip install -U imbalanced-learn```
 
 ### Anaconda Cloud platform: 
@@ -149,9 +149,9 @@ Ensemble classifier using samplers internally:
 
 **Comparison of ensembling classifiers internally using sampling**
 
-Ensembling classifiers have shown to improve classification performance compare to single learner. However, they will be affected by class imbalance. This example shows the benefit of balancing the training set before to learn learners. We are making the comparison with non-balanced ensemble methods, XGBoost Classifier and Deep Neural Network Model.
+Ensembling classifiers have shown to improve classification performance compare to single learner. However, they will be affected by class imbalance. This example shows the benefit of balancing the training set before to learn learners. I had created a comparison with non-balanced ensemble methods, XGBoost Classifier and Deep Neural Network Model.
 
-We make a comparison using the balanced accuracy and geometric mean which are metrics widely used in the literature to evaluate models learned on imbalanced set.
+I made a comparison using the balanced accuracy and geometric mean which are metrics widely used in the literature to evaluate models learned on imbalanced set.
 
 **A. Data Engineering:**
 
