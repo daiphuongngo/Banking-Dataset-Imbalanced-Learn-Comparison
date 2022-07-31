@@ -37,7 +37,7 @@ Use different classification methods to predict more accurately how many custome
 
 Use different models such as Single Decision Tree, Ensemble Classifiers (Bagging, Balanced Bagging, Random Forest, Balanced Random Forest, Easy Ensemble Classifier, RUS Boost), XGBoost, Deep Neural Network to evaluate their performances on both imbalanced Train and Test set while avoid fitting.
 
-Different metrics such as Accuracy (we do not rely on this one), Balanced Accuracy, Geometric Mean, Precision, Recall, F1 score, Confusion Matrix will be calculated.
+Different metrics such as Accuracy (I do not rely on this one), Balanced Accuracy, Geometric Mean, Precision, Recall, F1 score, Confusion Matrix will be calculated.
 
 Find the most important features of this dataset which can be used in policies to predict number of ‘Not Subscribed’ or ‘Subscribed’ customers after applying those new changes.
 
